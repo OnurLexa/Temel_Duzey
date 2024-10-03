@@ -1,0 +1,23 @@
+[!] STATİK ANALİZ
+- Statik analiz, programı çalıştırmadan kaynak kodunu incelemeyi içerir. "analiz1.py" isimli python kodu dosyaları
+arar ve zararlı bir eylemde bulunuyor gibi davranır
+
+[?] STATİK ANALİZ SIRASINDA
+- Koddaki şüpheli işlevler (os.walk, dosya işlemleri) incelenebilir.
+- Dosyaların uzantılarına bakarak hangi dosyaların hedeflendiği öğrenilebilir.
+- Kötü amaçlı yazılımın sistemde hangi dizinlerde işlem yaptığı anlaşılabilir.
+
+
+[!] DİNAMİK ANALİZ
+- Dinamik analizde ise bu kodu güvenli bir sanal makinede çalıştırıp, dosyanın nasıl davrandığını gözlemleyebilirsiniz.
+Dinamik analiz sırasında izlenmesi gerekenler:
+- Kötü amaçlı yazılım hangi dosyalara erişiyor?
+- Sistem üzerinde ne tür değişiklikler yapılıyor?
+- Ağ üzerinden veri gönderiyor mu?
+
+[?] DİNAMİK ANALİZ İÇİN ARAÇLAR
+- Process Monitor (ProcMon): Dosya, kayıt defteri, ağ etkinliklerini izlemek için kullanılabilir.
+- Wireshark: Ağ trafiğini izlemek için kullanılabilir.
+- Cuckoo Sandbox: Tam otomatik bir zararlı yazılım analiz ortamı sağlar.
+- Sysinternals Suite: Özellikle Windows sistemler için dosya ve işlem izleme araçlarını içerir.
+
