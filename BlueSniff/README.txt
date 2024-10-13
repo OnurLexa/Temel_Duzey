@@ -1,0 +1,2 @@
+"pybluez" kütüphanesini kullanarak Bluetooth cihazlaraını taramk için basit bir kod, fakat sadece cihazları tarar, veri vb şeyleri dinleyemez.
+eğer veri dinlemek istiyorsanız biraz üst seviye bilginizin olması gerek bizim burdaki amacımız temel seviye bilgiye sahip olan arkdaşlar için toollar geliştirmek
