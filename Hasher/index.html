@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hashing Uygulaması</title>
+</head>
+<body>
+    <h1>SHA-256 & MD5 Hashing Aracı</h1>
+
+    <label for="inputText">Hashlenecek Metin:</label>
+    <input type="text" id="inputText" placeholder="Metin girin">
+    <br><br>
+
+    <button onclick="hashText()">Hashle</button>
+
+    <h3>SHA-256 Hash:</h3>
+    <p id="sha256Result"></p>
+
+    <h3>MD5 Hash:</h3>
+    <p id="md5Result"></p>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.js"></script>
+
+    <script>
+        function hashText() {
+            var inputText = document.getElementById("inputText").value;
+
+            // SHA-256 hashing
+            var sha256Hash = CryptoJS.SHA256(inputText).toString(CryptoJS.enc.Hex);
+            document.getElementById("sha256Result").textContent = sha256Hash;
+
+            // MD5 hashing
+            var md5Hash = CryptoJS.MD5(inputText).toString(CryptoJS.enc.Hex);
+            document.getElementById("md5Result").textContent = md5Hash;
+        }
+    </script>
+</body>
+</html>
