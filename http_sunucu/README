@@ -1,0 +1,13 @@
+Socket oluşturma: socket() fonksiyonu, TCP/IP kullanarak bir soket oluşturur. Burada AF_INET protokol ailesi ve SOCK_STREAM kullanarak TCP bağlantısı kuruyoruz.
+
+Bağlantı Ayarları: bind() ile sunucunun hangi port üzerinden dinleyeceğini ayarlıyoruz. Bu örnekte port 8080 kullanılıyor.
+
+Dinleme: listen() fonksiyonu ile gelen bağlantıları bekleriz. Bu sunucu 3 bağlantıya kadar sıraya alabilir.
+
+Kabul Etme ve İşleme: accept() ile bir istemci bağlantısı kabul edilir. Ardından read() ile gelen HTTP isteğini alırız.
+
+GET ve POST İşlemleri: Gelen HTTP isteğini analiz ederiz. Eğer "GET" isteği varsa basit bir HTML sayfası döneriz. Eğer "POST" isteği varsa basit bir POST mesajı döndürülür.
+
+Yanıt Gönderme: İstemciye HTTP yanıtı oluşturulur ve send() fonksiyonu ile geri gönderilir.
+
+Bağlantıyı Kapatma: İstek işlendiğinde bağlantı kapatılır (close()).
